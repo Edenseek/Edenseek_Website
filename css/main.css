@@ -106,6 +106,8 @@ main { display: block; }
   border: 1px solid var(--border);
 }
 .chip--mature { background: var(--crimson); color: #fff; border-color: var(--crimson); }
+.chip--teen { background: var(--kids-sky); color: #fff; border-color: var(--kids-sky); }
+.chip--allages { background: transparent; color: var(--text-muted); border-color: var(--hairline-strong); }
 
 /* ------------------------------- media ---------------------------------- */
 .media { position: relative; overflow: hidden; border-radius: var(--radius); }

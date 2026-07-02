@@ -68,9 +68,16 @@
   }
 
   /* ------------------------------ cards ---------------------------------- */
+  // Visible maturity label, derived from canonical tier metadata (never hand-authored).
+  function tierBadge(tier) {
+    if (tier === "M") return '<span class="chip chip--mature">Mature</span>';
+    if (tier === "T") return '<span class="chip chip--teen">Teen</span>';
+    if (tier === "E") return '<span class="chip chip--allages">All-Ages</span>';
+    return "";
+  }
+
   function seriesCard(s) {
-    var mature = s.rating === "Mature"
-      ? '<span class="chip chip--mature">Mature</span>' : "";
+    var tierChip = tierBadge(s.tier);
     var genres = (s.genres || []).join(" · ");
     return h(
       '<article class="card ' + esc(s.accentClass || "") + '" data-entity="' +
@@ -78,7 +85,7 @@
         '<a class="card__link" href="' + esc(s.url) + '">' +
           '<div class="card__media">' + coverMedia(s.cover) + "</div>" +
           '<div class="card__body">' +
-            '<div class="card__tags">' + mature + '<span class="chip">' + esc(genres) + "</span></div>" +
+            '<div class="card__tags">' + tierChip + '<span class="chip">' + esc(genres) + "</span></div>" +
             '<h3 class="card__title">' + esc(s.title) + "</h3>" +
             '<p class="card__tagline">' + esc(s.tagline || "") + "</p>" +
           "</div>" +
