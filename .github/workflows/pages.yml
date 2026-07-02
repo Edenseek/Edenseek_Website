@@ -1,0 +1,52 @@
+# Publish Edenseek Publishing to GitHub Pages via the official GitHub Actions
+# Pages pipeline (replaces the legacy "Deploy from a branch" backend, which
+# stalled at deployment_queued for ~10 min and timed out).
+#
+# The BUILD step is the same Jekyll build that already succeeds — it honors
+# _config.yml excludes and preserves CNAME, so the published site is identical
+# (~5.27 MB). Only the DEPLOY transport changes: actions/deploy-pages instead
+# of the legacy backend.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least-privilege permissions required by deploy-pages (OIDC).
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll (honors _config.yml excludes)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
