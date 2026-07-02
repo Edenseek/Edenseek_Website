@@ -1,7 +1,7 @@
 {
   "_meta": {
     "collection": "series",
-    "description": "Comic series (Mature line). Canonical source of truth. Synopses marked draft:true are placeholder copy drafted from cover art pending client-approved text.",
+    "description": "Comic series (Mature line). Canonical source of truth. Descriptions are the approved Canonical Public Content (premise-level; endings excluded). Tiers per Appendix A2.",
     "updated": "2026-07-02"
   },
   "series": [
@@ -9,12 +9,13 @@
       "slug": "i-ride-for-them",
       "title": "I Ride for Them",
       "imprint": "comics",
+      "tier": "M",
       "accentClass": "accent-i-ride",
       "rating": "Mature",
       "genres": ["Sci-Fi", "Thriller"],
-      "tagline": "In a city that sold its future, one woman rides for the ones who have none.",
-      "synopsis": "In a near-future metropolis run on data and desperation, a nurse named Joy moves through the neon underlayer of the city carrying a secret worth more than her life. When the powerful come for the children no one else will protect, Joy becomes the only thing standing between them and the dark. A cinematic sci-fi thriller about sacrifice, motherhood, and the price of doing what's right.",
-      "draft": true,
+      "tagline": "I ride for them.",
+      "synopsis": "In a 2052 London so overpopulated that childbirth has been outlawed, an engineer builds a black-market virtual-reality program where people can still experience birth — and entrusts it to Joy, the AI midwife she creates. When a virus corrupts the program and abandons newborn digital children in a dangerous virtual world, Joy becomes their protector.",
+      "draft": false,
       "url": "/comics/i-ride-for-them/",
       "og": "https://edenseek.com/assets/site/og/og-i-ride-for-them-1200x630.jpg",
       "cover": { "base": "i-ride-for-them-01", "w": 800, "h": 1238, "lqip": "#514d3d", "alt": "I Ride for Them #1 cover art by Giulia Gualazzi: a woman in scrubs cradles an infant while holding a pistol against a neon city." },
@@ -32,8 +33,8 @@
           "title": "I Ride for Them #1",
           "price": "$5.99",
           "status": "Available",
-          "draft": true,
-          "synopsis": "The first issue introduces Joy and the city that made her — and the impossible choice that sets everything in motion.",
+          "draft": false,
+          "synopsis": "The story begins — the program, and the AI midwife Joy who watches over the children within it.",
           "cover": { "base": "i-ride-for-them-01", "w": 800, "h": 1238, "lqip": "#514d3d", "alt": "I Ride for Them #1 cover by Giulia Gualazzi." }
         },
         {
@@ -41,8 +42,8 @@
           "title": "I Ride for Them #2",
           "price": "$5.99",
           "status": "Available",
-          "draft": true,
-          "synopsis": "Hunted and haunted, Joy confronts the reflection of who she was — and decides who she must become.",
+          "draft": false,
+          "synopsis": "Hunted through the virtual world, Joy fights for the children in her care.",
           "cover": { "base": "i-ride-for-them-02", "w": 800, "h": 1238, "lqip": "#59748f", "alt": "I Ride for Them #2 cover by Giulia Gualazzi: Joy at a sink facing a ghostly reflection." }
         }
       ]
@@ -51,12 +52,13 @@
       "slug": "society-of-killers",
       "title": "Society of Killers",
       "imprint": "comics",
+      "tier": "M",
       "accentClass": "accent-sok",
       "rating": "Mature",
       "genres": ["Crime", "Noir", "Dark Fantasy"],
       "tagline": "They're going to make you an offer you should refuse.",
-      "synopsis": "A secret order of assassins operates in the shadows behind every city, bound by ritual, rivalry, and a code written in blood. When an invitation arrives — a single red card — refusing it may be the most dangerous thing you ever do. A stylish, noir-soaked descent into a world of elegant, monstrous killers.",
-      "draft": true,
+      "synopsis": "The Kellerman Institute — the world's oldest secret academy, founded in 1396 — recruits and trains elite psychopaths to become perfect killers. Inside its closed world, a class of subjects led by the coldly composed Astrid St. James navigates its tests, rivalries, and rituals.",
+      "draft": false,
       "url": "/comics/society-of-killers/",
       "og": "https://edenseek.com/assets/site/og/og-society-of-killers-1200x630.jpg",
       "cover": { "base": "society-of-killers-01", "w": 800, "h": 1214, "lqip": "#4d262e", "alt": "Society of Killers #1 cover: a gentleman in a bowler hat extends a red calling card across a desk." },
@@ -71,8 +73,8 @@
           "title": "Society of Killers #1",
           "price": "$9.99",
           "status": "Available",
-          "draft": true,
-          "synopsis": "An offer is extended. A red card changes hands. The Society opens its doors — and they do not close.",
+          "draft": false,
+          "synopsis": "Inside the Kellerman Institute, a new class of subjects begins its training.",
           "cover": { "base": "society-of-killers-01", "w": 800, "h": 1214, "lqip": "#4d262e", "alt": "Society of Killers #1 cover by Giulia Gualazzi." }
         },
         {
@@ -80,9 +82,9 @@
           "title": "Society of Killers #2",
           "price": "$9.99",
           "status": "Available",
-          "draft": true,
-          "synopsis": "The players are revealed. In a gathering of the Society's deadliest members, allegiance is the only currency — and betrayal, the only certainty.",
-          "cover": { "base": "society-of-killers-02", "w": 800, "h": 1188, "lqip": "#b9b194", "alt": "Society of Killers #2 cover: an ensemble of stylish, armed assassins." }
+          "draft": false,
+          "synopsis": "The subjects are tested against one another, and rivalries sharpen.",
+          "cover": { "base": "society-of-killers-02", "w": 800, "h": 1188, "lqip": "#b9b194", "alt": "Society of Killers #2 cover: an ensemble of stylish, armed characters." }
         }
       ]
     }
