@@ -349,6 +349,23 @@ main { display: block; }
 .lightbox__close { position: absolute; top: var(--space-4); right: var(--space-4); width: 48px; height: 48px; font-size: 2rem; line-height: 1; color: var(--paper); border-radius: var(--radius-pill); background: rgba(255,255,255,0.08); }
 .lightbox__close:hover { background: rgba(255,255,255,0.16); }
 
+/* ------------------------------ age gate -------------------------------- */
+.agegate {
+  position: fixed; inset: 0; z-index: calc(var(--z-lightbox) + 10);
+  display: grid; place-items: center; padding: var(--gutter);
+  background: rgba(8, 8, 10, 0.95); backdrop-filter: blur(8px);
+}
+.agegate__panel {
+  max-width: 30rem; text-align: center;
+  background: var(--surface); color: var(--paper);
+  border: 1px solid var(--hairline); border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6); box-shadow: var(--shadow-3);
+}
+.agegate__title { font-size: var(--fs-h2); margin: var(--space-3) 0 var(--space-4); }
+.agegate__text { color: var(--muted); margin-bottom: var(--space-6); }
+.agegate__text strong { color: var(--paper); }
+.agegate__actions { display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap; }
+
 /* ------------------------------ utilities ------------------------------- */
 .stack > * + * { margin-top: var(--space-4); }
 .mt-6 { margin-top: var(--space-6); }

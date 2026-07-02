@@ -281,11 +281,106 @@
     if (y) y.textContent = new Date().getFullYear();
   }
 
+  /* ----------------- Bridge Rule: maturity age gate (A2) --------------------
+     Enforces Appendix A2 in the navigation/link layer as a single choke point.
+     "Mature destinations" are derived from canonical tier metadata (window.EDEN),
+     never hardcoded — so the Website Agent changes gating by changing data only.
+     Gating logic is intentionally kept out of the canonical content. */
+  var AGE_KEY = "eden_age_ok";
+  function ageOK() {
+    try { return localStorage.getItem(AGE_KEY) === "1"; }
+    catch (e) { return window.__edenAgeOK === true; }
+  }
+  function setAgeOK() {
+    try { localStorage.setItem(AGE_KEY, "1"); }
+    catch (e) { window.__edenAgeOK = true; }
+  }
+  function matureMatchers() {
+    var items = (EDEN.series || []).concat(EDEN.books || []);
+    var urls = {}, hubs = {};
+    items.forEach(function (x) {
+      if (x.tier === "M" && x.url) {
+        urls[x.url] = 1;
+        hubs[x.url.replace(/[^/]+\/$/, "")] = 1; // derive imprint hub, e.g. /comics/
+      }
+    });
+    return { urls: urls, hubs: Object.keys(hubs) };
+  }
+  function normPath(href) {
+    var p = href.split("#")[0].split("?")[0];
+    if (p && p.charAt(p.length - 1) !== "/" && p.lastIndexOf(".") < p.lastIndexOf("/")) p += "/";
+    return p;
+  }
+  function isMatureDest(href) {
+    if (!href || href.charAt(0) !== "/") return false; // internal absolute paths only
+    var p = normPath(href), m = matureMatchers();
+    if (m.urls[p]) return true;
+    return m.hubs.some(function (hub) { return hub && (p === hub || p.indexOf(hub) === 0); });
+  }
+  function openGate(onEnter, onCancel) {
+    var box = h(
+      '<div class="agegate" role="dialog" aria-modal="true" aria-labelledby="agegate-title">' +
+        '<div class="agegate__panel">' +
+          '<p class="kicker">Mature content</p>' +
+          '<h2 class="agegate__title" id="agegate-title">This section is for adult readers.</h2>' +
+          '<p class="agegate__text">These comics are rated <strong>Mature</strong>. Please confirm you are 18 or older to continue.</p>' +
+          '<div class="agegate__actions">' +
+            '<button class="btn btn--primary" type="button" data-gate-enter>I am 18 or older</button>' +
+            '<button class="btn btn--ghost" type="button" data-gate-cancel>Take me back</button>' +
+          "</div>" +
+        "</div>" +
+      "</div>"
+    );
+    document.body.appendChild(box);
+    document.body.classList.add("nav-open");
+    var enterBtn = box.querySelector("[data-gate-enter]");
+    if (enterBtn) enterBtn.focus();
+    function done(cb) {
+      box.remove();
+      document.body.classList.remove("nav-open");
+      document.removeEventListener("keydown", onKey);
+      if (cb) cb();
+    }
+    function onKey(e) {
+      if (e.key === "Escape") { done(onCancel); return; }
+      if (e.key === "Tab") {
+        var f = box.querySelectorAll("button"), first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+    box.addEventListener("click", function (e) {
+      if (e.target.closest("[data-gate-enter]")) { setAgeOK(); done(onEnter); }
+      else if (e.target.closest("[data-gate-cancel]")) { done(onCancel); }
+    });
+    document.addEventListener("keydown", onKey);
+  }
+  function initAgeGate() {
+    if (!(EDEN.series || EDEN.books)) return;
+    // (1) Page-load guard: mature destination reached directly/via search.
+    if (isMatureDest(location.pathname) && !ageOK()) {
+      openGate(null, function () { location.href = "/"; });
+    }
+    // (2) Link interception: upward navigation into mature content is gated.
+    document.addEventListener("click", function (e) {
+      if (ageOK()) return;
+      var a = e.target.closest("a[href]");
+      if (!a || a.hasAttribute("data-dropdown-toggle")) return; // toggles aren't navigation
+      if (e.target.closest("[data-lightbox]")) return;          // enlarging a labeled cover is a preview
+      if (isMatureDest(a.getAttribute("href"))) {
+        e.preventDefault();
+        var href = a.getAttribute("href");
+        openGate(function () { location.href = href; }, null);
+      }
+    });
+  }
+
   function init() {
     try { runRenderers(); } catch (err) { /* fail soft: static fallbacks remain */ }
     initHeader();
     initLightbox();
     initYear();
+    try { initAgeGate(); } catch (err) { /* fail open: never block the site on a gate error */ }
   }
 
   if (document.readyState === "loading") {
