@@ -1,0 +1,13 @@
+# OS / editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+.vscode/
+.idea/
+
+# Local preview servers / logs
+*.log
+
+# Local agent/editor settings
+.claude/settings.local.json
