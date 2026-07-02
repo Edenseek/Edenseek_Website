@@ -1,0 +1,99 @@
+{
+  "_meta": {
+    "collection": "creators",
+    "description": "Creators (people) and their roles. Canonical source of truth. Bios condensed from the project team bios document.",
+    "updated": "2026-07-02"
+  },
+  "creators": [
+    {
+      "slug": "chris-mosley",
+      "name": "Chris Mosley",
+      "roles": ["Writer", "Co-Creator"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them"],
+      "photo": { "base": "creator-chris-mosley", "w": 400, "h": 400, "alt": "Chris Mosley, Writer and Co-Creator" },
+      "bio": "A hybrid screenwriter and comic writer from Detroit, Chris brings a cinematic tone and snappy dialogue to every panel. A two-time winner and finalist in the prestigious PAGE Screenwriting Competition and a back-to-back regional Emmy–winning writer, he channels personal and often tragic experience into his work — a process he jokingly calls “That sucked; you’re welcome.”"
+    },
+    {
+      "slug": "andrea-bormida",
+      "name": "Andrea Bormida",
+      "roles": ["Artist"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them", "society-of-killers"],
+      "photo": { "base": "creator-andrea-bormida", "w": 400, "h": 400, "alt": "Andrea Bormida, Artist" },
+      "bio": "A professional comics artist based in Italy, Andrea began his career in 1995 and went on to work for Sergio Bonelli Editore on Legs Weaver, Nathan Never, Agenzia Alfa and Asteroide Argo. Raised on Marvel and DC, he favors cinematic framing and dynamic staging, and inks his own pages for a unified look. His references include Alex Toth, Neal Adams, Gil Kane and Frank Miller."
+    },
+    {
+      "slug": "angelo-vecciarelli",
+      "name": "Angelo Vecciarelli",
+      "roles": ["Colorist"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them"],
+      "photo": { "base": "creator-angelo-vecciarelli", "w": 400, "h": 400, "alt": "Angelo Vecciarelli, Colorist" },
+      "bio": "Born in 1989, Angelo graduated in comics from the International School of Comics in 2015 and colors for Editoriale Aurea’s “Collezione Tuttocolore” and “Monografici Dago.” Since 2022 he has colored for independent publishers across America and Europe, including graphic novels marking the centenary of the Italian Air Force."
+    },
+    {
+      "slug": "giulia-gualazzi",
+      "name": "Giulia Gualazzi",
+      "roles": ["Cover Artist"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them", "society-of-killers"],
+      "photo": { "base": "creator-giulia-gualazzi", "w": 400, "h": 400, "alt": "Giulia Gualazzi, Cover Artist" },
+      "bio": "Giulia is a talented digital artist from Milan with a long history in comics and illustration. Working since 2016 for clients and publishers worldwide, she creates distinctive, standout designs and continually sharpens her craft to meet the needs of every project."
+    },
+    {
+      "slug": "bhumi-gupta",
+      "name": "Bhumi Gupta",
+      "roles": ["Editor"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them"],
+      "photo": { "base": "creator-bhumi-gupta", "w": 400, "h": 400, "alt": "Bhumi Gupta, Editor" },
+      "bio": "An architect by profession and an enthusiastic writer, Bhumi brings a designer’s eye for structure and detail to her editorial work. An avid reader and soulful artist, she is drawn to design, criticism and analysis."
+    },
+    {
+      "slug": "derek-uskert",
+      "name": "Derek Uskert",
+      "roles": ["Editor", "Co-Creator"],
+      "featured": true,
+      "worksOn": ["i-ride-for-them", "egypt-the-cat"],
+      "photo": { "base": "creator-derek-uskert", "w": 400, "h": 400, "alt": "Derek Uskert, Editor" },
+      "bio": "Derek is an award-winning luxury residential architect and a lifelong comic book enthusiast and collector. He works with many entertainment-industry clients and loves collaborating with incredible talents. He co-created the children’s series Egypt the Cat with his son, Ness."
+    },
+    {
+      "slug": "ness-uskert",
+      "name": "Ness Uskert",
+      "roles": ["Story", "Creator"],
+      "featured": true,
+      "worksOn": ["egypt-the-cat"],
+      "photo": { "base": "creator-ness-uskert", "w": 400, "h": 400, "alt": "Ness Uskert, Story and Creator" },
+      "bio": "Ness is the young creator and storyteller behind Egypt the Cat, a picture-book series he developed with his father, Derek. An eighth grader living in New York City, he dreams up Egypt’s magical, mischievous adventures."
+    },
+    {
+      "slug": "michael-bryan-quiambao",
+      "name": "Michael Bryan Quiambao",
+      "roles": ["Illustrator"],
+      "featured": true,
+      "worksOn": ["egypt-the-cat"],
+      "photo": { "base": "creator-michael-bryan-quiambao", "w": 400, "h": 400, "alt": "Michael Bryan Quiambao, Illustrator" },
+      "bio": "Michael is the illustrator who brings Egypt the Cat to life, pairing expressive, anime-influenced art with bright, playful storytelling made for young readers."
+    },
+    {
+      "slug": "alyssa-mao",
+      "name": "Alyssa Mao",
+      "roles": ["Cover Artist"],
+      "featured": false,
+      "worksOn": ["egypt-the-cat"],
+      "photo": null,
+      "bio": "Cover artist for Egypt the Cat in Magic! Magic! Magic!"
+    },
+    {
+      "slug": "perkins",
+      "name": "Perkins",
+      "roles": ["Writer"],
+      "featured": false,
+      "worksOn": ["society-of-killers"],
+      "photo": null,
+      "bio": "Writer of Society of Killers."
+    }
+  ]
+}

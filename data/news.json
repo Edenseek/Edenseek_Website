@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "collection": "news",
+    "description": "News / updates. Placeholder entries in V1, flagged draft:true. The future Website Agent will manage publishing from this collection.",
+    "updated": "2026-07-02"
+  },
+  "news": [
+    {
+      "slug": "edenseek-online",
+      "title": "Edenseek Publishing is now online",
+      "date": "2026-07-02",
+      "status": "published",
+      "draft": true,
+      "summary": "Welcome to the new home of Edenseek Publishing — a first look at our worlds, our books, and the creators behind them.",
+      "url": "/news/"
+    },
+    {
+      "slug": "society-of-killers-2",
+      "title": "Society of Killers #2 is available now",
+      "date": "2026-06-15",
+      "status": "published",
+      "draft": true,
+      "summary": "The Society's deadliest members step into the light. Issue #2 continues the noir-soaked saga.",
+      "url": "/comics/society-of-killers/"
+    },
+    {
+      "slug": "egypt-the-cat-series",
+      "title": "Meet Egypt the Cat",
+      "date": "2026-05-20",
+      "status": "published",
+      "draft": true,
+      "summary": "Our children's picture-book series follows a magical little cat through five wonder-filled adventures.",
+      "url": "/books/egypt-the-cat/"
+    }
+  ]
+}

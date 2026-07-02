@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "collection": "books",
+    "description": "Children's book series. Canonical source of truth. Synopses marked draft:true are placeholder copy pending client-approved text.",
+    "updated": "2026-07-02"
+  },
+  "books": [
+    {
+      "slug": "egypt-the-cat",
+      "title": "Egypt the Cat",
+      "imprint": "books",
+      "accentClass": "accent-egypt",
+      "audience": "Children",
+      "genres": ["Picture Book", "Adventure", "All Ages"],
+      "tagline": "A magical little cat, a curious boy, and adventures that leap off the page.",
+      "synopsis": "Egypt the Cat is a bright, whimsical picture-book series for young readers, following a spirited orange cat and his best friend as they tumble through magic shows, dance floors, road trips, time itself, and the far-off future. Created by young storyteller Ness Uskert and brought to life by illustrator Michael Bryan Quiambao, Egypt the Cat celebrates wonder, friendship, and being born different.",
+      "draft": true,
+      "url": "/books/egypt-the-cat/",
+      "og": "https://edenseek.com/assets/site/og/og-egypt-the-cat-1200x630.jpg",
+      "cover": { "base": "egypt-the-cat-01", "w": 800, "h": 644, "lqip": "#715656", "alt": "Egypt the Cat in Magic! Magic! Magic! cover: a boy and an orange cat perform a magic act." },
+      "credits": [
+        { "role": "Story", "creator": "ness-uskert" },
+        { "role": "Illustrator", "creator": "michael-bryan-quiambao" },
+        { "role": "Cover Artist", "creator": "alyssa-mao" }
+      ],
+      "issues": [
+        {
+          "number": 1,
+          "title": "Egypt the Cat in Magic! Magic! Magic!",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "The show begins! Egypt and his friend take the stage for a magic act where absolutely nothing goes as planned — and everything turns out magical.",
+          "cover": { "base": "egypt-the-cat-01", "w": 800, "h": 644, "lqip": "#715656", "alt": "Egypt the Cat in Magic! Magic! Magic! cover, cover art by Alyssa Mao." }
+        },
+        {
+          "number": 2,
+          "title": "Egypt the Cat in Dance Maniac",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "Egypt discovers he simply cannot stop dancing — and neither will you.",
+          "cover": { "base": "egypt-the-cat-02", "w": 800, "h": 640, "lqip": "#63404c", "alt": "Egypt the Cat in Dance Maniac cover." }
+        },
+        {
+          "number": 3,
+          "title": "Egypt the Cat Leaves Los Angeles",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "It's time for a big adventure as Egypt packs up and sets off on the open road.",
+          "cover": { "base": "egypt-the-cat-03", "w": 800, "h": 640, "lqip": "#8e919c", "alt": "Egypt the Cat Leaves Los Angeles cover." }
+        },
+        {
+          "number": 4,
+          "title": "Egypt the Cat in Time",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "Tick, tock — Egypt tumbles through history in a race against the clock.",
+          "cover": { "base": "egypt-the-cat-04", "w": 800, "h": 618, "lqip": "#91827b", "alt": "Egypt the Cat in Time cover." }
+        },
+        {
+          "number": 5,
+          "title": "Egypt the Cat in the Future",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "To the future! Egypt rockets into a world of wonders yet to come.",
+          "cover": { "base": "egypt-the-cat-05", "w": 800, "h": 618, "lqip": "#c1c5b8", "alt": "Egypt the Cat in the Future cover." }
+        }
+      ]
+    }
+  ]
+}

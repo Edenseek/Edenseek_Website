@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "collection": "series",
+    "description": "Comic series (Mature line). Canonical source of truth. Synopses marked draft:true are placeholder copy drafted from cover art pending client-approved text.",
+    "updated": "2026-07-02"
+  },
+  "series": [
+    {
+      "slug": "i-ride-for-them",
+      "title": "I Ride for Them",
+      "imprint": "comics",
+      "accentClass": "accent-i-ride",
+      "rating": "Mature",
+      "genres": ["Sci-Fi", "Thriller"],
+      "tagline": "In a city that sold its future, one woman rides for the ones who have none.",
+      "synopsis": "In a near-future metropolis run on data and desperation, a nurse named Joy moves through the neon underlayer of the city carrying a secret worth more than her life. When the powerful come for the children no one else will protect, Joy becomes the only thing standing between them and the dark. A cinematic sci-fi thriller about sacrifice, motherhood, and the price of doing what's right.",
+      "draft": true,
+      "url": "/comics/i-ride-for-them/",
+      "og": "https://edenseek.com/assets/site/og/og-i-ride-for-them-1200x630.jpg",
+      "cover": { "base": "i-ride-for-them-01", "w": 800, "h": 1238, "lqip": "#514d3d", "alt": "I Ride for Them #1 cover art by Giulia Gualazzi: a woman in scrubs cradles an infant while holding a pistol against a neon city." },
+      "credits": [
+        { "role": "Writer", "creator": "chris-mosley" },
+        { "role": "Artist", "creator": "andrea-bormida" },
+        { "role": "Colorist", "creator": "angelo-vecciarelli" },
+        { "role": "Cover Artist", "creator": "giulia-gualazzi" },
+        { "role": "Editor", "creator": "bhumi-gupta" },
+        { "role": "Editor", "creator": "derek-uskert" }
+      ],
+      "issues": [
+        {
+          "number": 1,
+          "title": "I Ride for Them #1",
+          "price": "$5.99",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "The first issue introduces Joy and the city that made her — and the impossible choice that sets everything in motion.",
+          "cover": { "base": "i-ride-for-them-01", "w": 800, "h": 1238, "lqip": "#514d3d", "alt": "I Ride for Them #1 cover by Giulia Gualazzi." }
+        },
+        {
+          "number": 2,
+          "title": "I Ride for Them #2",
+          "price": "$5.99",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "Hunted and haunted, Joy confronts the reflection of who she was — and decides who she must become.",
+          "cover": { "base": "i-ride-for-them-02", "w": 800, "h": 1238, "lqip": "#59748f", "alt": "I Ride for Them #2 cover by Giulia Gualazzi: Joy at a sink facing a ghostly reflection." }
+        }
+      ]
+    },
+    {
+      "slug": "society-of-killers",
+      "title": "Society of Killers",
+      "imprint": "comics",
+      "accentClass": "accent-sok",
+      "rating": "Mature",
+      "genres": ["Crime", "Noir", "Dark Fantasy"],
+      "tagline": "They're going to make you an offer you should refuse.",
+      "synopsis": "A secret order of assassins operates in the shadows behind every city, bound by ritual, rivalry, and a code written in blood. When an invitation arrives — a single red card — refusing it may be the most dangerous thing you ever do. A stylish, noir-soaked descent into a world of elegant, monstrous killers.",
+      "draft": true,
+      "url": "/comics/society-of-killers/",
+      "og": "https://edenseek.com/assets/site/og/og-society-of-killers-1200x630.jpg",
+      "cover": { "base": "society-of-killers-01", "w": 800, "h": 1214, "lqip": "#4d262e", "alt": "Society of Killers #1 cover: a gentleman in a bowler hat extends a red calling card across a desk." },
+      "credits": [
+        { "role": "Writer", "creator": "perkins" },
+        { "role": "Artist", "creator": "andrea-bormida" },
+        { "role": "Cover Artist", "creator": "giulia-gualazzi" }
+      ],
+      "issues": [
+        {
+          "number": 1,
+          "title": "Society of Killers #1",
+          "price": "$9.99",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "An offer is extended. A red card changes hands. The Society opens its doors — and they do not close.",
+          "cover": { "base": "society-of-killers-01", "w": 800, "h": 1214, "lqip": "#4d262e", "alt": "Society of Killers #1 cover by Giulia Gualazzi." }
+        },
+        {
+          "number": 2,
+          "title": "Society of Killers #2",
+          "price": "$9.99",
+          "status": "Available",
+          "draft": true,
+          "synopsis": "The players are revealed. In a gathering of the Society's deadliest members, allegiance is the only currency — and betrayal, the only certainty.",
+          "cover": { "base": "society-of-killers-02", "w": 800, "h": 1188, "lqip": "#b9b194", "alt": "Society of Killers #2 cover: an ensemble of stylish, armed assassins." }
+        }
+      ]
+    }
+  ]
+}

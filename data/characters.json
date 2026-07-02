@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "collection": "characters",
+    "description": "In-story characters. Scaffolded for future /characters/ pages; not surfaced as standalone pages in V1.",
+    "updated": "2026-07-02"
+  },
+  "characters": [
+    {
+      "slug": "egypt-the-cat-character",
+      "name": "Egypt",
+      "series": "egypt-the-cat",
+      "role": "Protagonist",
+      "draft": true,
+      "description": "A spirited, magical orange cat with a taste for adventure and a heart full of wonder."
+    },
+    {
+      "slug": "joy",
+      "name": "Joy",
+      "series": "i-ride-for-them",
+      "role": "Protagonist",
+      "draft": true,
+      "description": "A nurse navigating the neon underbelly of a near-future city, protecting the children no one else will."
+    }
+  ]
+}
