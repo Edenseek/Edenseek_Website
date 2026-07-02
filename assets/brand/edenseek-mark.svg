@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" role="img" aria-label="Edenseek">
+  <title>Edenseek</title>
+  <!-- Arch frame -->
+  <path d="M12 114 V46 C12 22 29 8 50 8 C71 8 88 22 88 46 V114 Z"
+        fill="none" stroke="currentColor" stroke-width="5"/>
+  <!-- The Seeker: woman's profile silhouette -->
+  <path d="M43 30 Q31 33 30 48 Q29 61 36 71 Q38 74 40 76 L40 100 L73 100 L64 78
+           Q63 74 66 71 Q71 69 69 64 Q66 63 67 60 L71 57 Q72 56 69 54 Q68 50 69 47
+           Q68 36 57 31 Q50 28 43 30 Z"
+        fill="currentColor"/>
+</svg>
