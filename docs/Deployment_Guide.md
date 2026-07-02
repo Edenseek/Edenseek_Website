@@ -11,7 +11,7 @@ The site is 100% static (HTML/CSS/JS). No build step, no backend. It is designed
 2. Create the GitHub repo and push `main`.
 3. **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / root (`/`).**
 4. Required root files (all shipped):
-   - **`.nojekyll`** — disables Jekyll so nothing is reprocessed and `_`-paths work.
+   - **`_config.yml`** — Jekyll `exclude:` list so branch-deploy publishes **only the production site** (~5.6 MB), keeping `Projects/`, `Logo/`, `source-originals/`, `docs/` in the repo but unpublished. (Replaces the earlier `.nojekyll`; do not re-add `.nojekyll` or the excludes stop applying. Pages have no front matter, so Jekyll copies them verbatim.)
    - **`CNAME`** — contains `edenseek.com`.
    - **`404.html`** — on-brand, `noindex`.
    - **`robots.txt`**, **`sitemap.xml`** — SEO (see §3).

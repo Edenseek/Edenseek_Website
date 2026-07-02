@@ -1,0 +1,18 @@
+# GitHub Pages (Deploy from a branch) — publish ONLY the production website.
+#
+# Why this file exists: with "Deploy from a branch", the ONLY built-in way to
+# keep source assets in the repo but out of the published site is Jekyll's
+# `exclude`. Our HTML/CSS/JS/JSON have no YAML front matter, so Jekyll copies
+# every production file verbatim (no templating) — identical output, minus the
+# excluded source/docs. `CNAME` is preserved automatically and must NOT be
+# excluded. Do not re-add `.nojekyll`, or these excludes stop taking effect.
+#
+# Preserved-but-unpublished source (still in the repo, never deleted/moved):
+exclude:
+  - Projects/
+  - Logo/
+  - source-originals/
+  - docs/
+  - README.md
+  - edenseek_website_claude.bat
+  - .gitignore
