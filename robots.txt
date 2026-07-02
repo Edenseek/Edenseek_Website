@@ -1,0 +1,11 @@
+# Edenseek Publishing
+User-agent: *
+Allow: /
+
+# Do not index raw source material or internal docs
+Disallow: /Projects/
+Disallow: /Logo/
+Disallow: /source-originals/
+Disallow: /docs/
+
+Sitemap: https://edenseek.com/sitemap.xml
