@@ -49,6 +49,9 @@ module.exports = {
     routes: [
       '/', '/comics/', '/comics/i-ride-for-them/', '/comics/society-of-killers/',
       '/books/', '/books/egypt-the-cat/', '/creators/', '/about/', '/news/', '/contact/',
+      // Legacy landing page: intentionally excluded from site nav/menus, but
+      // listed here for SEO discovery so the Commit 4 generator keeps it.
+      '/vrneighborhood/',
     ],
   },
 };
