@@ -13,6 +13,7 @@ exclude:
   - Logo/
   - source-originals/
   - docs/
+  - payments/
   - README.md
   - edenseek_website_claude.bat
   - .gitignore
