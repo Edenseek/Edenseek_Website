@@ -37,7 +37,7 @@ window.EDEN = {
     },
     {
       slug: "society-of-killers", title: "Society of Killers", imprint: "comics", tier: "M",
-      accentClass: "accent-sok", rating: "Mature", genres: ["Crime", "Noir", "Dark Fantasy"],
+      accentClass: "accent-sok", rating: "Mature", genres: ["Dark Thriller"],
       tagline: "They're going to make you an offer you should refuse.",
       synopsis: "The Kellerman Institute — the world's oldest secret academy, founded in 1396 — recruits and trains elite psychopaths to become perfect killers. Inside its closed world, a class of subjects led by the coldly composed Astrid St. James navigates its tests, rivalries, and rituals.",
       draft: false, url: "/comics/society-of-killers/",

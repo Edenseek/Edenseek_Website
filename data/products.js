@@ -27,10 +27,14 @@
 
      shipping          Manual-fulfillment metadata — shipping terms.
      fulfillment       Manual-fulfillment metadata — how the order is fulfilled.
-                       These preserve the IngramSpark Print-on-Demand (POD) process:
-                       orders are fulfilled manually via IngramSpark POD, NOT by an
-                       automated backend. Kept in the config so the POD workflow
-                       stays documented alongside each product.
+                       Fulfillment is MANUAL, never an automated backend, and it
+                       differs by line:
+                         • Egypt the Cat books → IngramSpark Print-on-Demand.
+                         • Comics (I Ride for Them, Society of Killers) → printed
+                           and distributed manually by Edenseek (owner-managed
+                           inventory), NOT IngramSpark.
+                       Kept in the config so the fulfillment workflow stays
+                       documented alongside each product.
 
      stripePaymentLink USED NOW. On the current static website this is the live
                        Stripe Payment Link the "Buy Now" button opens. Leave it
@@ -62,7 +66,7 @@ window.EDEN_STORE = {
       priceLabel: "$5.99",
       coverImage: "/assets/covers/i-ride-for-them-01-cover-800w.webp",
       shipping: "Standard U.S. Shipping ($5.99)",
-      fulfillment: "IngramSpark Print-on-Demand",
+      fulfillment: "Printed and distributed manually by Edenseek (owner-managed inventory)",
       stripePaymentLink: "https://buy.stripe.com/eVqdRbdxg2Ma8Sse4P1Nu07",
       stripeProductId: "",   // reserved for the future Edenseek platform checkout
       stripePriceId: ""      // reserved for the future Edenseek platform checkout
@@ -77,7 +81,7 @@ window.EDEN_STORE = {
       priceLabel: "$5.99",
       coverImage: "/assets/covers/i-ride-for-them-02-cover-800w.webp",
       shipping: "Standard U.S. Shipping ($5.99)",
-      fulfillment: "IngramSpark Print-on-Demand",
+      fulfillment: "Printed and distributed manually by Edenseek (owner-managed inventory)",
       stripePaymentLink: "https://buy.stripe.com/4gM4gB0Ku5YmfgQ5yj1Nu08",
       stripeProductId: "",
       stripePriceId: ""
@@ -94,7 +98,7 @@ window.EDEN_STORE = {
       priceLabel: "$5.99",
       coverImage: "/assets/covers/society-of-killers-01-cover-800w.webp",
       shipping: "Standard U.S. Shipping ($5.99)",
-      fulfillment: "IngramSpark Print-on-Demand",
+      fulfillment: "Printed and distributed manually by Edenseek (owner-managed inventory)",
       stripePaymentLink: "https://buy.stripe.com/28EdRbeBkgD0ecMgcX1Nu09",
       stripeProductId: "",
       stripePriceId: ""
@@ -109,7 +113,7 @@ window.EDEN_STORE = {
       priceLabel: "$5.99",
       coverImage: "/assets/covers/society-of-killers-02-cover-800w.webp",
       shipping: "Standard U.S. Shipping ($5.99)",
-      fulfillment: "IngramSpark Print-on-Demand",
+      fulfillment: "Printed and distributed manually by Edenseek (owner-managed inventory)",
       stripePaymentLink: "https://buy.stripe.com/dRm8wR9h0fyW8Ss7Gr1Nu0a",
       stripeProductId: "",
       stripePriceId: ""
