@@ -31,7 +31,7 @@ window.EDEN = {
         { role: "Editor", creator: "bhumi-gupta" }, { role: "Editor", creator: "derek-uskert" }
       ],
       issues: [
-        { number: 1, title: "I Ride for Them #1", price: "$5.99", status: "Available", draft: false, synopsis: "The story begins — the program, and the AI midwife Joy who watches over the children within it.", cover: { base: "i-ride-for-them-01", w: 800, h: 1238, lqip: "#514d3d", alt: "I Ride for Them #1 cover by Giulia Gualazzi." } },
+        { number: 1, title: "I Ride for Them #1", price: "$5.99", status: "Available", draft: false, synopsis: "Ava, a brilliant but troubled tech founder, creates the Birthplace and its AI caretaker, Joy, to protect the children within it. But as Ava’s past resurfaces and the system begins to reveal its deeper purpose, a story of technology, trauma, and protection begins.", cover: { base: "i-ride-for-them-01", w: 800, h: 1238, lqip: "#514d3d", alt: "I Ride for Them #1 cover by Giulia Gualazzi." } },
         { number: 2, title: "I Ride for Them #2", price: "$5.99", status: "Available", draft: false, synopsis: "Hunted through the virtual world, Joy fights for the children in her care.", cover: { base: "i-ride-for-them-02", w: 800, h: 1238, lqip: "#59748f", alt: "I Ride for Them #2 cover by Giulia Gualazzi: Joy at a sink facing a ghostly reflection." } }
       ]
     },
@@ -48,8 +48,8 @@ window.EDEN = {
         { role: "Cover Artist", creator: "giulia-gualazzi" }
       ],
       issues: [
-        { number: 1, title: "Society of Killers #1", price: "$9.99", status: "Available", draft: false, synopsis: "Inside the Kellerman Institute, a new class of subjects begins its training.", cover: { base: "society-of-killers-01", w: 800, h: 1214, lqip: "#4d262e", alt: "Society of Killers #1 cover by Giulia Gualazzi." } },
-        { number: 2, title: "Society of Killers #2", price: "$9.99", status: "Available", draft: false, synopsis: "The subjects are tested against one another, and rivalries sharpen.", cover: { base: "society-of-killers-02", w: 800, h: 1188, lqip: "#b9b194", alt: "Society of Killers #2 cover: an ensemble of stylish, armed characters." } }
+        { number: 1, title: "Society of Killers #1", price: "$5.99", status: "Available", draft: false, synopsis: "The Society of Killers targets its newest round of recruits.", cover: { base: "society-of-killers-01", w: 800, h: 1214, lqip: "#4d262e", alt: "Society of Killers #1 cover by Giulia Gualazzi." } },
+        { number: 2, title: "Society of Killers #2", price: "$5.99", status: "Available", draft: false, synopsis: "Inside the Kellerman Institute, a new class of subjects begins its training.", cover: { base: "society-of-killers-02", w: 800, h: 1188, lqip: "#b9b194", alt: "Society of Killers #2 cover: an ensemble of stylish, armed characters." } }
       ]
     }
   ],
@@ -68,11 +68,11 @@ window.EDEN = {
         { role: "Cover Artist", creator: "alyssa-mao" }
       ],
       issues: [
-        { number: 1, title: "Egypt the Cat in Magic! Magic! Magic!", status: "Available", draft: false, synopsis: "Ness puts on a magic show — and when he makes his cat Egypt \"disappear\" into a top hat, Egypt hides so well that Ness sets off on a worried search to find him.", cover: { base: "egypt-the-cat-01", w: 800, h: 644, lqip: "#715656", alt: "Egypt the Cat in Magic! Magic! Magic! cover, cover art by Alyssa Mao." } },
-        { number: 2, title: "Egypt the Cat in Dance Maniac", status: "Available", draft: false, synopsis: "Stuck indoors cleaning his room on a sunny day when he'd rather be outside, Ness is coaxed out of his funk by a little \"razzle dazzle.\"", cover: { base: "egypt-the-cat-02", w: 800, h: 640, lqip: "#63404c", alt: "Egypt the Cat in Dance Maniac cover." } },
-        { number: 3, title: "Egypt the Cat Leaves Los Angeles", status: "Available", draft: true, synopsis: "Description coming soon.", cover: { base: "egypt-the-cat-03", w: 800, h: 640, lqip: "#8e919c", alt: "Egypt the Cat Leaves Los Angeles cover." } },
-        { number: 4, title: "Egypt the Cat in Time", status: "Available", draft: true, synopsis: "Description coming soon.", cover: { base: "egypt-the-cat-04", w: 800, h: 618, lqip: "#91827b", alt: "Egypt the Cat in Time cover." } },
-        { number: 5, title: "Egypt the Cat in the Future", status: "Available", draft: true, synopsis: "Description coming soon.", cover: { base: "egypt-the-cat-05", w: 800, h: 618, lqip: "#c1c5b8", alt: "Egypt the Cat in the Future cover." } }
+        { number: 1, title: "Egypt the Cat in Magic! Magic! Magic!", status: "Available", draft: false, synopsis: "Egypt is a cool cat, and he's a little bit different. He doesn't let that stop him from being who he is and seeing the world in his own wonderful way. In this first adventure, Egypt and Ness, accidently discover how to perform a very exciting magic trick together as a result of some very unexpected and surprising events.", cover: { base: "egypt-the-cat-01", w: 800, h: 644, lqip: "#715656", alt: "Egypt the Cat in Magic! Magic! Magic! cover, cover art by Alyssa Mao." } },
+        { number: 2, title: "Egypt the Cat in Dance Maniac", status: "Available", draft: false, synopsis: "In this adventure, Ness with Egypt's help, learns that a good attitude can transform even a boring chore into a magical experience.", cover: { base: "egypt-the-cat-02", w: 800, h: 640, lqip: "#63404c", alt: "Egypt the Cat in Dance Maniac cover." } },
+        { number: 3, title: "Egypt the Cat Leaves Los Angeles", status: "Available", draft: false, synopsis: "In this adventure, Ness and Egypt move across the country and experience their first plane trip and an incredible journey.", cover: { base: "egypt-the-cat-03", w: 800, h: 640, lqip: "#8e919c", alt: "Egypt the Cat Leaves Los Angeles cover." } },
+        { number: 4, title: "Egypt the Cat in Time", status: "Available", draft: false, synopsis: "In this adventure, Ness and Egypt accidently travel through time and get to know themselves better than they could ever imagine.", cover: { base: "egypt-the-cat-04", w: 800, h: 618, lqip: "#91827b", alt: "Egypt the Cat in Time cover." } },
+        { number: 5, title: "Egypt the Cat in the Future", status: "Available", draft: false, synopsis: "The exciting sequel to Egypt the Cat in Time. A simple repair in the future becomes a thrilling adventure across time as Ness and Egypt race to stop history from unraveling. A heartwarming children's story about friendship, courage, and the power of every choice.", cover: { base: "egypt-the-cat-05", w: 800, h: 618, lqip: "#c1c5b8", alt: "Egypt the Cat in the Future cover." } }
       ]
     }
   ],
