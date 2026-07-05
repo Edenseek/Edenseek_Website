@@ -1,22 +1,22 @@
-<!-- Edenseek — VR Neighborhood (legacy landing page; NOT in nav, footer or menus; URL-only + vrneighborhood.com redirect). Reframed as an immersive-technology milestone that evolved into Edenseek. -->
+<!-- Edenseek — VR Neighborhood (legacy landing page; NOT in nav, footer or menus; URL-only + vrneighborhood.com redirect). Positioned as the first generation of Edenseek Spatial: an immersive architectural-visualization / residential-digital-twin platform that shipped on Meta Quest. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VR Neighborhood | Immersive Architecture VR by Edenseek</title>
-<meta name="description" content="VR Neighborhood was an ambitious social VR application — shipped on Meta Quest, built in Unreal Engine with an AWS GameLift multiplayer backend, letting people explore, customize and inhabit architecture together. Its ideas became a foundation of Edenseek.">
+<title>VR Neighborhood | Residential Digital Twins &amp; VR by Edenseek Spatial</title>
+<meta name="description" content="VR Neighborhood was an immersive architectural visualization and social computing platform — real-time multiplayer residential digital twins, publicly released on Meta Quest. The first generation of Edenseek Spatial.">
 <link rel="canonical" href="https://edenseek.com/vrneighborhood/">
 <meta name="theme-color" content="#0F0F12">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Edenseek Publishing">
-<meta property="og:title" content="VR Neighborhood | Immersive Architecture VR by Edenseek">
-<meta property="og:description" content="A technically ambitious social VR application — shipped on Meta Quest, built in Unreal Engine with multiplayer at scale. The immersive milestone that became a foundation of Edenseek.">
+<meta property="og:title" content="VR Neighborhood | Residential Digital Twins & VR by Edenseek Spatial">
+<meta property="og:description" content="An immersive architectural visualization and social computing platform — real-time multiplayer residential digital twins, publicly released on Meta Quest. The first generation of Edenseek Spatial.">
 <meta property="og:url" content="https://edenseek.com/vrneighborhood/">
 <meta property="og:image" content="https://edenseek.com/assets/site/og/og-home-1200x630.jpg">
-<meta property="og:image:alt" content="VR Neighborhood — an immersive architecture VR project, continuing through Edenseek.">
+<meta property="og:image:alt" content="VR Neighborhood — residential digital twins in VR, the first generation of Edenseek Spatial.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VR Neighborhood | Immersive Architecture VR by Edenseek">
-<meta name="twitter:description" content="A technically ambitious social VR application — shipped on Meta Quest, built in Unreal Engine with multiplayer at scale. The immersive milestone that became a foundation of Edenseek.">
+<meta name="twitter:title" content="VR Neighborhood | Residential Digital Twins & VR by Edenseek Spatial">
+<meta name="twitter:description" content="An immersive architectural visualization and social computing platform — real-time multiplayer residential digital twins, publicly released on Meta Quest. The first generation of Edenseek Spatial.">
 <meta name="twitter:image" content="https://edenseek.com/assets/site/og/og-home-1200x630.jpg">
-<meta name="twitter:image:alt" content="VR Neighborhood — an immersive architecture VR project, continuing through Edenseek.">
+<meta name="twitter:image:alt" content="VR Neighborhood — residential digital twins in VR, the first generation of Edenseek Spatial.">
 <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,7 +26,7 @@
 <script src="/data/edenseek-data.js" defer></script>
 <script src="/js/edenseek.js" defer></script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"VR Neighborhood","url":"https://edenseek.com/vrneighborhood/","description":"VR Neighborhood was a social VR application that let people explore, customize and inhabit architecture together. Shipped publicly on Meta Quest (App Lab) and distributed through SideQuest, it was built in Unreal Engine with an AWS GameLift multiplayer backend, persistent player neighborhoods, an avatar system, real-time architectural visualization, material customization, measurement tools and dynamic environmental audio. Its ideas became a foundation of Edenseek.","gamePlatform":["Meta Quest","Oculus","Virtual Reality"],"operatingSystem":"Meta Quest","applicationCategory":"Game","datePublished":"2023-07","publisher":{"@type":"Organization","name":"Edenseek Publishing","url":"https://edenseek.com/"},"sameAs":["https://www.meta.com/experiences/vr-neighborhood/4099862433444192/","https://sidequestvr.com/app/58629/vr-neighborhood"]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"VR Neighborhood","alternateName":"Edenseek Spatial (first generation)","url":"https://edenseek.com/vrneighborhood/","description":"VR Neighborhood was an immersive architectural visualization and social computing platform that let future homeowners experience residential designs before construction. Publicly released on Meta Quest (App Lab) and distributed through SideQuest, it was built in Unreal Engine with an AWS GameLift multiplayer backend, featuring real-time multiplayer residential digital twins, full-scale walkable homes, real-time material and wall-color customization, distance and measurement tools, spatial audio, an avatar system, persistent spaces and interactive activities. Its world-building technology, interactive content and spatial systems became one of the foundations of Edenseek.","applicationCategory":"DesignApplication","applicationSubCategory":"Architectural Visualization","operatingSystem":"Meta Quest","gamePlatform":["Meta Quest","Oculus","Virtual Reality"],"datePublished":"2023-07","award":"Accepted into the NVIDIA Inception program","publisher":{"@type":"Organization","name":"Edenseek Publishing","url":"https://edenseek.com/"},"sameAs":["https://www.meta.com/experiences/vr-neighborhood/4099862433444192/","https://sidequestvr.com/app/58629/vr-neighborhood"]}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://edenseek.com/"},{"@type":"ListItem","position":2,"name":"VR Neighborhood","item":"https://edenseek.com/vrneighborhood/"}]}
@@ -55,7 +55,10 @@
     border-left: 3px solid var(--accent-2);
   }
 
-  /* Reserved space for a future hero image / screenshot gallery */
+  /* Hero brand wordmark (decorative — the <h1> carries the accessible name) */
+  .vr-wordmark { height: clamp(34px, 5vw, 54px); width: auto; margin-bottom: var(--space-5); opacity: 0.96; }
+
+  /* Hero media frame — reserved 16:9 frame, now holding the archival demo video */
   .vr-gallery { margin-top: var(--space-7); }
   .vr-gallery__frame {
     position: relative; display: grid; place-items: center; text-align: center;
@@ -66,11 +69,8 @@
       var(--bg-elev);
     border: 1px solid var(--border); overflow: hidden;
   }
-  .vr-gallery__mark { width: 44px; height: 52px; color: var(--accent-2); opacity: 0.85; margin-bottom: var(--space-3); }
-  .vr-gallery__label {
-    font-size: var(--fs-kicker); font-weight: 700; letter-spacing: var(--tracking-kicker);
-    text-transform: uppercase; color: var(--text-muted);
-  }
+  .vr-gallery__frame.has-media { padding: 0; }
+  .vr-gallery__video { width: 100%; height: 100%; object-fit: cover; background: var(--ink); display: block; }
   .vr-gallery figcaption { margin-top: var(--space-3); color: var(--text-muted); font-size: var(--fs-small); }
 
   /* Architecture → VR Neighborhood → Edenseek lineage flow */
@@ -101,6 +101,21 @@
   .archive-card__cue { margin-top: var(--space-3); display: inline-flex; align-items: center; gap: var(--space-1); font-weight: 600; font-size: var(--fs-small); color: var(--accent-2); }
   .archive-card__cue::after { content: "↗"; transition: transform var(--dur-fast) var(--ease); }
   .archive-card:hover .archive-card__cue::after { transform: translate(2px, -2px); }
+
+  /* Historical artifact card — same language as the archive cards, intentionally
+     quieter so it stays secondary to the demo video and the Meta/SideQuest links */
+  .artifact-card {
+    display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-3);
+    padding: var(--space-6); margin-top: var(--space-5); max-width: var(--measure);
+    background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  }
+  .artifact-card__meta { font-size: var(--fs-kicker); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
+  .artifact-card__title { font-family: var(--font-display); font-size: var(--fs-h3); font-weight: 600; line-height: var(--lh-heading); }
+  .artifact-card__desc { color: var(--text-muted); font-size: var(--fs-small); }
+
+  /* Industry recognition highlight — reuses the .pillar surface */
+  .recognition { max-width: var(--measure); margin-top: var(--space-5); }
+  .recognition .pillar__icon { margin-bottom: var(--space-3); }
 
   .vr-cta { text-align: center; }
   .vr-cta .btn { min-height: 52px; padding-inline: var(--space-7); }
@@ -155,49 +170,53 @@
   <!-- HERO — position as a shipped, technically ambitious immersive project -->
   <section class="section section--tight" data-section="vr-hero">
     <div class="container prose">
-      <span class="kicker">Immersive Origins</span>
+      <img class="vr-wordmark" src="/assets/vrneighborhood/vrn-wordmark-white.png" width="2750" height="500" alt="" decoding="async">
+      <span class="kicker">The first generation of Edenseek Spatial</span>
       <h1 class="mt-6" style="margin-bottom: var(--space-4);">VR Neighborhood</h1>
-      <p class="detail-hero__tagline" style="margin-bottom: var(--space-5);">Architecture you could walk into, reshape, and share.</p>
-      <p class="lede">VR Neighborhood was a technically ambitious social VR application — a place where people could explore full-scale virtual neighborhoods, customize the spaces around them, and meet other people inside them. It shipped publicly on Meta Quest, and it became one of the foundations Edenseek is now built on.</p>
+      <p class="detail-hero__tagline" style="margin-bottom: var(--space-5);">Step inside your home before it's ever built.</p>
+      <p class="lede">VR Neighborhood was a technically ambitious social VR application created to let future homeowners experience residential designs before construction. Users could walk through full-scale homes, customize interior materials and finishes in real time, play games, and meet other people inside shared virtual spaces. It shipped publicly on Meta Quest, and the world-building technology, interactive content, and spatial systems developed for VR Neighborhood became one of the foundations Edenseek is built on today.</p>
     </div>
 
     <div class="container">
       <figure class="vr-gallery">
-        <div class="vr-gallery__frame" role="img" aria-label="Placeholder reserved for VR Neighborhood screenshots and hero imagery.">
-          <div>
-            <svg class="vr-gallery__mark" viewBox="0 0 100 120" aria-hidden="true" focusable="false">
-              <path d="M12 114 V46 C12 22 29 8 50 8 C71 8 88 22 88 46 V114 Z" fill="none" stroke="currentColor" stroke-width="6"/>
-            </svg>
-            <p class="vr-gallery__label">Screenshot gallery</p>
-          </div>
+        <div class="vr-gallery__frame has-media">
+          <video class="vr-gallery__video" controls preload="metadata" playsinline aria-label="VR Neighborhood archival demo video">
+            <source src="/assets/vrneighborhood/vrn-demo.mp4" type="video/mp4">
+            <p>Your browser can't play embedded video. <a href="/assets/vrneighborhood/vrn-demo.mp4">Download the VR Neighborhood demo video</a>.</p>
+          </video>
         </div>
-        <figcaption>Archive imagery from VR Neighborhood — a hero image and screenshot gallery will live here.</figcaption>
+        <figcaption>Archival demo footage from VR Neighborhood — full-scale, customizable residential digital twins in real time.</figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- LINEAGE — Architecture → VR Neighborhood → Edenseek -->
+  <!-- LINEAGE — Architecture Practice → Residential Digital Twins → VR Neighborhood → Edenseek Spatial -->
   <section class="section section--tight" data-section="vr-lineage">
     <div class="container prose">
       <span class="kicker">The through-line</span>
-      <h2 class="mt-6" style="margin-bottom: var(--space-3);">Architecture, then presence, then Edenseek</h2>
-      <p>Edenseek didn't start from scratch. VR Neighborhood was a milestone in years of experimentation at the intersection of architecture, technology, and human connection — and its ideas lead directly into what Edenseek is building now.</p>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">From architecture practice to Edenseek Spatial</h2>
+      <p>Edenseek didn't start from scratch. VR Neighborhood was the first public implementation of ideas that had been developing for years — a straight line from an architecture practice to the immersive platform Edenseek is building now.</p>
     </div>
     <div class="container">
       <div class="lineage">
         <div class="lineage__step">
-          <h3>Architecture</h3>
-          <p>It began with a question: what if architecture wasn't something to look at, but somewhere to be? Designs meant to be inhabited, not just rendered.</p>
+          <h3>Architecture Practice</h3>
+          <p>It began with a simple question: <em>what if homeowners could experience their future home before deciding to build it?</em> Rather than relying on renderings alone, clients could inhabit full-scale residential designs, explore every room, and make design decisions before construction ever began.</p>
+        </div>
+        <div class="lineage__arrow" aria-hidden="true">↓</div>
+        <div class="lineage__step">
+          <h3>Residential Digital Twins</h3>
+          <p>Those designs became real-time, walkable digital twins — full-scale homes you could step inside, measure, and evaluate in context, not just view as static imagery.</p>
         </div>
         <div class="lineage__arrow" aria-hidden="true">↓</div>
         <div class="lineage__step">
           <h3>VR Neighborhood</h3>
-          <p>That question shipped. Full-scale, customizable, multiplayer virtual neighborhoods — real-time visualization and social presence, released to the public on Meta Quest.</p>
+          <p>That idea evolved into <strong>VR Neighborhood</strong> — a publicly released Meta Quest experience featuring real-time multiplayer residential digital twins. Users could walk through homes at full scale, customize materials and interior finishes, interact with other visitors, and experience architecture as a shared virtual environment.</p>
         </div>
         <div class="lineage__arrow" aria-hidden="true">↓</div>
         <div class="lineage__step lineage__step--now">
-          <h3>Edenseek</h3>
-          <p>The same instincts — immersion, technology, and human connection — now meet artificial intelligence and storytelling to create the next generation of interactive publishing.</p>
+          <h3>Edenseek Spatial</h3>
+          <p>The same world-building technology, interactive content, and spatial systems now continue as Edenseek Spatial — where immersive technology, artificial intelligence, and storytelling come together to create the next generation of interactive publishing.</p>
         </div>
       </div>
     </div>
@@ -209,21 +228,21 @@
   <section class="section section--tight" data-section="vr-experience">
     <div class="container prose">
       <span class="kicker">The experience</span>
-      <h2 class="mt-6" style="margin-bottom: var(--space-3);">A place to inhabit, not just observe</h2>
-      <p>VR Neighborhood treated virtual environments as living places. Inside, visitors could:</p>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">A home to inhabit, not just observe</h2>
+      <p>VR Neighborhood treated residential architecture as a living place. Inside the platform, visitors could:</p>
     </div>
     <div class="container">
       <ul class="spatial-list spatial-list--two">
-        <li>Explore multiple virtual neighborhoods inspired by different architectural styles and designers.</li>
-        <li>Walk through buildings and environments at full scale.</li>
-        <li>Customize architectural materials and wall colors in real time.</li>
-        <li>Measure architectural spaces using built-in distance tools.</li>
-        <li>Experience environmental sound effects and spatial audio.</li>
-        <li>Socialize with other players through multiplayer interactions.</li>
-        <li>Customize avatars and personal homes.</li>
-        <li>Participate in community events.</li>
-        <li>Play interactive games such as chess and checkers.</li>
-        <li>Experience architecture as something to inhabit rather than simply observe.</li>
+        <li>Visualize residential homes before construction — designs you could evaluate, not just preview.</li>
+        <li>Explore multiple residential homes inspired by different architectural styles and designers.</li>
+        <li>Walk through full-scale, walkable digital twins of complete homes.</li>
+        <li>Customize wall colors and interior materials and finishes in real time.</li>
+        <li>Explore interior design decisions in context, room by room.</li>
+        <li>Measure spaces with built-in distance and measurement tools.</li>
+        <li>Experience spatial audio and environmental sound throughout each home.</li>
+        <li>Meet other visitors through real-time multiplayer.</li>
+        <li>Customize avatars and personalize their own home.</li>
+        <li>Enjoy supporting experiences, including interactive games like chess and checkers.</li>
       </ul>
     </div>
   </section>
@@ -232,8 +251,8 @@
   <section class="section section--tight" data-section="vr-technology">
     <div class="container prose">
       <span class="kicker">The technology</span>
-      <h2 class="mt-6" style="margin-bottom: var(--space-3);">Built to ship, and it did</h2>
-      <p>This wasn't a concept demo. VR Neighborhood was a released product on real hardware, backed by production infrastructure.</p>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">A spatial platform, built to ship</h2>
+      <p>This wasn't a concept demo. VR Neighborhood was a publicly released architectural visualization and social computing platform, running on real hardware and backed by production infrastructure.</p>
     </div>
 
     <div class="container">
@@ -249,33 +268,37 @@
       <div class="pillars" style="margin-top: var(--space-6);">
         <article class="pillar">
           <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="4"/><path d="M8 12h.01M16 12h.01M12 12l1.5 2M12 12l-1.5 2"/></svg>
-          <h3>Shipped on Meta Quest</h3>
-          <p>Released publicly on Meta Quest App Lab and distributed through SideQuest — installed and played on real headsets, not just in the lab.</p>
+          <h3>Public Meta Quest release</h3>
+          <p>Released publicly on Meta Quest App Lab and distributed through SideQuest — installed and used on real headsets by real people, not just demoed in the lab.</p>
         </article>
         <article class="pillar">
           <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/><path d="M8 8.5 10.5 15M16 8.5 13.5 15M8.5 7h7"/></svg>
           <h3>Multiplayer at scale</h3>
-          <p>An AWS GameLift backend powered real-time networking, an avatar system, and persistent player neighborhoods that were still there when you returned.</p>
+          <p>An AWS GameLift backend powered real-time multiplayer networking and an avatar system, so visitors could tour and evaluate homes together in the same shared space.</p>
         </article>
         <article class="pillar">
           <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/><path d="M3 9h18"/></svg>
-          <h3>Real-time architecture</h3>
-          <p>Built in Unreal Engine with live material customization, built-in measurement tools, and dynamic environmental audio — architecture rendered and reshaped on the fly.</p>
+          <h3>Real-time digital twins</h3>
+          <p>Built in Unreal Engine with live wall-color and material customization, built-in measurement tools, and dynamic environmental audio — residential architecture rendered and reshaped on the fly.</p>
         </article>
       </div>
     </div>
 
     <div class="container prose">
-      <h3 class="mt-7" style="margin-bottom: var(--space-3);">Under the hood</h3>
+      <h3 class="mt-7" style="margin-bottom: var(--space-3);">Platform capabilities</h3>
       <ul class="spatial-list spatial-list--two">
-        <li>Persistent player neighborhoods</li>
-        <li>Multiplayer networking</li>
-        <li>Avatar system</li>
-        <li>Real-time architectural visualization</li>
-        <li>Material customization</li>
-        <li>Measurement tools</li>
-        <li>Dynamic environmental audio</li>
-        <li>Interactive in-world activities</li>
+        <li>Residential home visualization before construction</li>
+        <li>Full-scale walkable digital twins</li>
+        <li>Real-time wall-color customization</li>
+        <li>Material and interior-finish customization</li>
+        <li>Interior design exploration</li>
+        <li>Distance and measurement tools</li>
+        <li>Spatial audio and environmental sound</li>
+        <li>Real-time multiplayer networking</li>
+        <li>Persistent, personalized homes and avatar system</li>
+        <li>Multiple architect-inspired homes</li>
+        <li>Interactive games, including chess and checkers</li>
+        <li>Unreal Engine · AWS GameLift · Meta Quest public release</li>
       </ul>
     </div>
   </section>
@@ -286,10 +309,24 @@
   <section class="section section--tight" data-section="vr-legacy">
     <div class="container prose">
       <span class="kicker">The legacy</span>
-      <h2 class="mt-6" style="margin-bottom: var(--space-3);">The idea that became Edenseek</h2>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">The platform that became Edenseek</h2>
       <p>VR Neighborhood explored the intersection of architecture, technology, and human connection. Rather than viewing architecture as static imagery, the project treated virtual environments as living places that could be explored, customized, and shared.</p>
       <p>Those same ideas continue today inside Edenseek, where immersive technology, artificial intelligence, and storytelling come together to create the next generation of interactive publishing.</p>
-      <blockquote class="mission">VR Neighborhood was never simply an old game. It was an ambitious exploration of immersive architecture, multiplayer technology, and social interaction — and one of the foundations Edenseek is built on.</blockquote>
+      <blockquote class="mission">VR Neighborhood was an ambitious exploration of immersive architecture, real-time multiplayer technology, and social computing. Its technology, world-building systems, and interactive content became one of the foundations Edenseek is built on today.</blockquote>
+    </div>
+  </section>
+
+  <!-- INDUSTRY RECOGNITION -->
+  <section class="section section--tight" data-section="vr-recognition">
+    <div class="container prose">
+      <span class="kicker">Industry recognition</span>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">Recognized for technical ambition</h2>
+      <div class="recognition">
+        <article class="pillar">
+          <svg class="pillar__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M9 14.5 7 22l5-3 5 3-2-7.5"/></svg>
+          <p><strong>VR Neighborhood, Inc. was accepted into the NVIDIA Inception program</strong>, recognizing the project's technical ambition in real-time graphics, simulation, visualization, and immersive computing.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -318,10 +355,26 @@
     </div>
   </section>
 
+  <!-- HISTORICAL MATERIALS — VR Neighborhood Herald PDF -->
+  <section class="section section--tight" data-section="vr-historical">
+    <div class="container prose">
+      <span class="kicker">Historical materials</span>
+      <h2 class="mt-6" style="margin-bottom: var(--space-3);">From the archive</h2>
+      <p>An early artifact from the project's beginnings — kept here as a piece of history, not a current publication.</p>
+      <div class="artifact-card">
+        <span class="artifact-card__meta">Company paper · 2021</span>
+        <span class="artifact-card__title">VR Neighborhood Herald, Vol. 1 — 2021</span>
+        <span class="artifact-card__desc">Published before VR Neighborhood's Mensa Annual Gathering presentation in Houston, this early company paper captured the project's original metaverse vision, residential architecture focus, and creative worldbuilding.</span>
+        <a class="btn btn--ghost" href="/assets/vrneighborhood/vr-neighborhood-herald-vol1-2021.pdf" target="_blank" rel="noopener" download>Download VR Neighborhood Herald<span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
+      </div>
+      <p class="mt-7">The Herald is also where several Edenseek threads first crossed. Inspired by <a href="/books/egypt-the-cat/">Egypt the Cat</a> — created by Edenseek co-founder Ness Uskert — the paper folded in original cartoons and comic art. Its short story, written by Chris Mosley, later grew into the comic series <a href="/comics/i-ride-for-them/">I Ride for Them</a>, drawn by Giulia Gualazzi, who went on to create many of Edenseek's early covers, including <a href="/comics/society-of-killers/">Society of Killers</a> #2. Egypt the Cat and I Ride for Them #1 went on sale together at New York Comic Con 2022 — Edenseek's first public-facing event.</p>
+    </div>
+  </section>
+
   <!-- CLOSING CTA -->
   <section class="section section--tight vr-cta" data-section="vr-cta">
     <div class="container">
-      <p class="lede mx-auto text-center" style="margin-bottom: var(--space-5);">Edenseek is the continuation of years of experimentation in immersive technology.</p>
+      <p class="lede mx-auto text-center" style="margin-bottom: var(--space-5);">VR Neighborhood was the first public implementation of ideas that continue today as Edenseek Spatial — the continuation of years of experimentation in immersive technology.</p>
       <p><a class="btn btn--primary" href="/">Explore Edenseek</a> <a class="btn btn--ghost" href="/about/">Our story</a></p>
     </div>
   </section>
