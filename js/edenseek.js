@@ -42,8 +42,12 @@
     var sizes = opts.sizes || "(min-width:1024px) 300px, (min-width:768px) 30vw, 46vw";
     var loading = opts.eager ? "eager" : "lazy";
     var fp = opts.eager ? ' fetchpriority="high"' : "";
+    // opts.ratio pins a uniform tile aspect (e.g. "2/3") so cards in a grid share
+    // the same cover height and their titles align; the image fills via object-fit
+    // cover. Omit it (detail pages) to preserve each cover's true proportions.
+    var ratio = opts.ratio || (cover.w + "/" + cover.h);
     return (
-      '<div class="media" style="aspect-ratio:' + cover.w + "/" + cover.h + ";background:" + esc(cover.lqip || "#17171c") + '">' +
+      '<div class="media" style="aspect-ratio:' + ratio + ";background:" + esc(cover.lqip || "#17171c") + '">' +
       '<img class="media__img" src="/assets/covers/' + esc(cover.base) + '-cover-800w.webp"' +
       ' srcset="' + coverSrcset(cover.base) + '" sizes="' + esc(sizes) + '"' +
       ' width="' + cover.w + '" height="' + cover.h + '" alt="' + esc(cover.alt || "") + '"' +
@@ -76,16 +80,24 @@
     return "";
   }
 
+  // Genre/status chips as individual pills (consistent, one row, wraps if needed).
+  function genreChips(list) {
+    return (list || []).map(function (g) { return '<span class="chip">' + esc(g) + "</span>"; }).join("");
+  }
+
   function seriesCard(s) {
     var tierChip = tierBadge(s.tier);
-    var genres = (s.genres || []).join(" · ");
+    var chips = genreChips(s.genres);
     return h(
       '<article class="card ' + esc(s.accentClass || "") + '" data-entity="' +
         (s.imprint === "books" ? "book" : "series") + '" data-slug="' + esc(s.slug) + '">' +
         '<a class="card__link" href="' + esc(s.url) + '">' +
-          '<div class="card__media">' + coverMedia(s.cover) + "</div>" +
+          '<div class="card__media">' + coverMedia(s.cover, { ratio: s.imprint === "books" ? "4/3" : "2/3" }) + "</div>" +
           '<div class="card__body">' +
-            '<div class="card__tags">' + tierChip + '<span class="chip">' + esc(genres) + "</span></div>" +
+            // Row 1: maturity badge (always present, one line so titles align).
+            '<div class="card__tags">' + tierChip + "</div>" +
+            // Row 2: genre/status tags, uniform spacing beneath the badge.
+            (chips ? '<div class="card__tags card__tags--genre">' + chips + "</div>" : "") +
             '<h3 class="card__title">' + esc(s.title) + "</h3>" +
             '<p class="card__tagline">' + esc(s.tagline || "") + "</p>" +
           "</div>" +
@@ -94,11 +106,44 @@
     );
   }
 
+  // Homepage/featured book card: one card per issue (e.g. each Egypt the Cat title).
+  // Shares the .card component + the same two-row tag layout as seriesCard.
+  function bookIssueCard(issue, book) {
+    var tierChip = tierBadge(book.tier);
+    var chips = genreChips((book.genres || []).slice(0, 1)); // one consistent genre pill
+    return h(
+      '<article class="card ' + esc(book.accentClass || "") + '" data-entity="book-issue" data-slug="' +
+        esc(book.slug) + '" data-number="' + esc(issue.number) + '">' +
+        '<a class="card__link" href="' + esc(book.url) + '">' +
+          '<div class="card__media">' + coverMedia(issue.cover, { ratio: "4/3" }) + "</div>" +
+          '<div class="card__body">' +
+            '<div class="card__tags">' + tierChip + "</div>" +
+            (chips ? '<div class="card__tags card__tags--genre">' + chips + "</div>" : "") +
+            '<h3 class="card__title">' + esc(issue.title) + "</h3>" +
+            '<p class="card__tagline">Book ' + esc(issue.number) + "</p>" +
+          "</div>" +
+        "</a>" +
+      "</article>"
+    );
+  }
+
+  // Split into given name(s) + family name so every creator renders on a
+  // consistent two-line layout (e.g. "Michael Bryan" / "Quiambao").
+  function splitName(name) {
+    var parts = String(name == null ? "" : name).trim().split(/\s+/);
+    if (parts.length < 2) return { given: "", family: parts[0] || "" };
+    return { given: parts.slice(0, -1).join(" "), family: parts[parts.length - 1] };
+  }
+
   function creatorCard(c) {
+    var nm = splitName(c.name);
+    var nameHtml =
+      (nm.given ? '<span class="creator__given">' + esc(nm.given) + "</span>" : "") +
+      '<span class="creator__family">' + esc(nm.family) + "</span>";
     return h(
       '<article class="creator" data-entity="creator" data-slug="' + esc(c.slug) + '" id="creator-' + esc(c.slug) + '">' +
         portraitImg(c.photo) +
-        '<h3 class="creator__name">' + esc(c.name) + "</h3>" +
+        '<h3 class="creator__name">' + nameHtml + "</h3>" +
         '<p class="creator__role">' + esc((c.roles || []).join(" · ")) + "</p>" +
         (c.bio ? '<p class="creator__bio">' + esc(c.bio) + "</p>" : "") +
       "</article>"
@@ -165,6 +210,17 @@
       renderInto(node, items, seriesCard);
     });
     document.querySelectorAll('[data-render="books-grid"]').forEach(function (node) {
+      // data-expand="issues": show each book's individual titles as cards
+      // (e.g. all five Egypt the Cat books) instead of one series card.
+      if (node.dataset.expand === "issues") {
+        var cards = [];
+        (EDEN.books || []).forEach(function (b) {
+          (b.issues || []).forEach(function (iss) { cards.push({ issue: iss, book: b }); });
+        });
+        if (node.dataset.limit) cards = cards.slice(0, +node.dataset.limit);
+        renderInto(node, cards, function (x) { return bookIssueCard(x.issue, x.book); });
+        return;
+      }
       var items = (EDEN.books || []).slice();
       if (node.dataset.limit) items = items.slice(0, +node.dataset.limit);
       renderInto(node, items, seriesCard);
