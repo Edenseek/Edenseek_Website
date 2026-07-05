@@ -12,7 +12,7 @@ window.EDEN = {
     origin: "https://edenseek.com",
     tagline: "Stories Born Different.",
     description: "Edenseek is an independent publisher of original, character-driven stories — across every age — about who we really are.",
-    email: "hello@edenseek.com",
+    email: "derek@edenseek.com",
     social: []
   },
 

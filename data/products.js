@@ -109,9 +109,9 @@ window.EDEN_STORE = {
       available: true,
       priceLabel: "",
       coverImage: "/assets/covers/egypt-the-cat-01-cover-800w.webp",
-      stripePaymentLink: "",
-      stripeProductId: "",
-      stripePriceId: ""
+      stripePaymentLink: "https://buy.stripe.com/28E00l9h03Qe0lW2m71Nu00",  // LIVE — first Stripe Payment Link
+      stripeProductId: "prod_UpXmN6Ua3SZu6o",                                 // reserved for future platform checkout
+      stripePriceId: ""                                                       // reserved (add Price ID when known)
     },
     {
       slug: "egypt-the-cat-2",

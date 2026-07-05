@@ -15,6 +15,17 @@ module.exports = {
   rootDir: ROOT,
   dataDir: path.join(ROOT, 'data'),
 
+  // Site-level record for the render bundle's `window.EDEN.site`.
+  // (Interim home; the M2 spec migrates this to a canonical /data/site.json later.)
+  site: {
+    name: 'Edenseek Publishing',
+    origin: 'https://edenseek.com',
+    tagline: 'Stories Born Different.',
+    description: 'Edenseek is an independent publisher of original, character-driven stories — across every age — about who we really are.',
+    email: 'derek@edenseek.com',
+    social: [],
+  },
+
   tiers: ['E', 'T', 'M'],
 
   // Canonical collections + schema-lite required fields.
