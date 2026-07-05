@@ -160,8 +160,48 @@
     );
   }
 
-  function issueRow(issue, accent) {
-    var price = issue.price ? '<span class="issue__price">' + esc(issue.price) + "</span>" : "";
+  /* ------------------------------ commerce ------------------------------- */
+  // Look up a store product (see /data/products.js). Returns null if the store
+  // config isn't loaded on this page or the slug isn't listed.
+  function findProduct(slug) {
+    var store = window.EDEN_STORE || {};
+    var list = store.products || [];
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].slug === slug) return list[i];
+    }
+    return null;
+  }
+
+  // Purchase button, driven entirely by the product config — never hardcoded.
+  // Static-site rule: "Buy Now" (live Stripe Payment Link) only when the product
+  // is available AND a payment link exists; otherwise "Coming Soon".
+  // stripeProductId/stripePriceId are intentionally ignored here — they are
+  // reserved for the future Edenseek platform's server-driven checkout.
+  function purchaseButton(product) {
+    if (product && product.available && product.stripePaymentLink) {
+      // Stripe Checkout opens in the SAME tab (normal navigation). No target=_blank,
+      // so there is no window.opener to secure; the link is the HTTPS Stripe URL.
+      return (
+        '<p class="issue__actions">' +
+          '<a class="btn btn--primary" href="' + esc(product.stripePaymentLink) + '">Buy Now' +
+          '<span class="visually-hidden"> — ' + esc(product.title) + ' (secure checkout)</span>' +
+          "</a>" +
+        "</p>"
+      );
+    }
+    return (
+      '<p class="issue__actions">' +
+        '<span class="btn btn--ghost btn--disabled" aria-disabled="true" title="Coming soon">Coming Soon</span>' +
+      "</p>"
+    );
+  }
+
+  function issueRow(issue, accent, seriesSlug) {
+    // The rendered issue is matched to a store product by "<series>-<number>".
+    var product = findProduct((seriesSlug || "") + "-" + issue.number);
+    // Price shown on the card reads from the store config when present.
+    var priceText = (product && product.priceLabel) ? product.priceLabel : issue.price;
+    var price = priceText ? '<span class="issue__price">' + esc(priceText) + "</span>" : "";
     return h(
       '<article class="issue ' + esc(accent || "") + '" data-entity="issue" data-number="' + esc(issue.number) + '">' +
         '<div class="issue__cover">' + coverMedia(issue.cover, { sizes: "(min-width:768px) 200px, 40vw" }) + "</div>" +
@@ -169,7 +209,7 @@
           '<h3 class="issue__title">' + esc(issue.title) + "</h3>" +
           '<p class="issue__meta"><span class="chip">' + esc(issue.status || "") + "</span>" + price + "</p>" +
           '<p class="issue__synopsis">' + esc(issue.synopsis || "") + "</p>" +
-          '<p class="issue__actions"><span class="btn btn--ghost btn--disabled" aria-disabled="true" title="Storefront coming soon">Buy — Coming soon</span></p>' +
+          purchaseButton(product) +
         "</div>" +
       "</article>"
     );
@@ -241,7 +281,7 @@
     document.querySelectorAll('[data-render="issues"]').forEach(function (node) {
       var s = findSeries(node.dataset.slug);
       if (!s) return;
-      renderInto(node, s.issues || [], function (i) { return issueRow(i, s.accentClass); });
+      renderInto(node, s.issues || [], function (i) { return issueRow(i, s.accentClass, s.slug); });
     });
     document.querySelectorAll('[data-render="credits"]').forEach(function (node) {
       var s = findSeries(node.dataset.slug);
