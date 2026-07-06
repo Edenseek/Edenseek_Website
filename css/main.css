@@ -76,6 +76,10 @@ main { display: block; }
 .see-all {
   font-weight: 600; font-size: var(--fs-small);
   display: inline-flex; align-items: center; gap: var(--space-1);
+  /* Brighter accent so the link clears WCAG AA on the dark shell (the base
+     crimson link is only 3.3:1). On the kids band, `.band-kids a` overrides
+     this with dark ink, so that context is unaffected. */
+  color: var(--accent-2);
 }
 .see-all::after { content: "→"; transition: transform var(--dur-fast) var(--ease); }
 .see-all:hover::after { transform: translateX(3px); }
@@ -112,7 +116,7 @@ main { display: block; }
 /* ------------------------------- media ---------------------------------- */
 .media { position: relative; overflow: hidden; border-radius: var(--radius); }
 .media__img { width: 100%; height: 100%; object-fit: cover; }
-.media--round { border-radius: var(--radius-pill); }
+.media--round { border-radius: var(--radius-pill); aspect-ratio: 1 / 1; }
 .media--placeholder { background: var(--bg-raised); }
 [data-lightbox] { cursor: zoom-in; }
 
@@ -248,8 +252,13 @@ main { display: block; }
 .grid-creators { display: grid; gap: var(--space-6) var(--space-5); grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 640px) { .grid-creators { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) { .grid-creators { grid-template-columns: repeat(4, 1fr); } }
-.creator { text-align: center; }
-.creator .media--round { width: min(160px, 60%); margin: 0 auto var(--space-3); box-shadow: var(--shadow-2); }
+/* scroll-margin so a deep-link (e.g. /creators/#creator-slug from a comic's
+   credits) lands the card below the sticky header instead of under it. */
+.creator { text-align: center; scroll-margin-top: calc(var(--header-h) + var(--space-5)); }
+.creator .media--round { width: min(160px, 60%); margin: 0 auto var(--space-3); box-shadow: var(--shadow-2); transition: box-shadow var(--dur) var(--ease); }
+/* The deep-linked creator gets an accent ring so the reader can immediately
+   spot which card the anchor landed on. */
+.creator:target .media--round { box-shadow: 0 0 0 3px var(--accent-2), var(--shadow-2); }
 .creator__name { font-size: var(--fs-h3); }
 /* Consistent two-line layout: given name(s) on line 1, family name on line 2. */
 .creator__given, .creator__family { display: block; }
@@ -342,11 +351,17 @@ main { display: block; }
 @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
 .footer-brand__word { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; }
 .footer-brand p { color: var(--text-muted); font-size: var(--fs-small); margin-top: var(--space-3); max-width: 34ch; }
-.footer-col h4 { font-family: var(--font-body); font-size: var(--fs-kicker); text-transform: uppercase; letter-spacing: var(--tracking-kicker); color: var(--text-muted); margin-bottom: var(--space-4); }
+.footer-col h2 { font-family: var(--font-body); font-size: var(--fs-kicker); font-weight: 600; text-transform: uppercase; letter-spacing: var(--tracking-kicker); color: var(--text-muted); margin-bottom: var(--space-4); }
 .footer-col li { margin-bottom: var(--space-2); }
 .footer-col a { color: var(--text); font-size: var(--fs-small); }
 .footer-col a:hover { color: var(--accent-2); }
 .footer-bottom { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: space-between; align-items: center; margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--hairline); color: var(--text-muted); font-size: var(--fs-small); }
+/* Legible link color (the default crimson link fails AA on the footer surface). */
+.footer-bottom a { color: var(--text); }
+.footer-bottom a:hover { color: var(--accent-2); }
+.footer-social { display: inline-flex; align-items: center; gap: var(--space-4); }
+.footer-social__link { display: inline-flex; }
+.footer-social__link svg { width: 18px; height: 18px; display: block; }
 
 /* ------------------------------ lightbox -------------------------------- */
 .lightbox { position: fixed; inset: 0; z-index: var(--z-lightbox); display: grid; place-items: center; padding: var(--gutter); background: rgba(6,6,8,0.9); backdrop-filter: blur(6px); }
